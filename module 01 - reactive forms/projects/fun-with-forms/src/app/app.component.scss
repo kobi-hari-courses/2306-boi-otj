@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-wrapper {
+    border: 1px solid gray;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.8em;
+    color: rgb(80, 80, 80)
+}
+
+input {
+    border: 1px solid black;
+    outline: transparent 0px;
+}
+
+input.ng-invalid.ng-touched  {
+    border: 1px solid red;
+    color: red;
+}

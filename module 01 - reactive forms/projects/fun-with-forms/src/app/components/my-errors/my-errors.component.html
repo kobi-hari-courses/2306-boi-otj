@@ -1,0 +1,10 @@
+<ng-container *ngIf="formControl.errors as errs">
+    <div class="error" *ngIf="errs['required'] as err">Required</div>
+    <div class="error" *ngIf="errs['email'] as err">Requires email format</div>
+    <div class="error" *ngIf="errs['lowercase'] as err">Lowercase, wrong letters: {{err.wrongChars}}</div>
+    <div class="error" *ngIf="errs['minlength'] as err">Minimum Length: {{err.actualLength}} / {{err.requiredLength}}</div>
+    <div class="error" *ngIf="errs['available'] as err">Name is already taken</div>
+</ng-container>
+<div *ngIf="formControl.pending" class="pending">
+    checking...
+</div>

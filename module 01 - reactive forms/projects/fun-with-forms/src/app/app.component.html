@@ -1,0 +1,25 @@
+<ng-container [formGroup]="group">
+  <div class="field-wrapper" *ngIf="group.controls['username'] as control">
+    <label>Username</label>
+    <input type="text" [formControl]="control">
+    <app-my-errors [formControl]="control"/>
+    
+  </div>
+  
+  <div class="field-wrapper" *ngIf="group.controls['email'] as control">
+    <label>Email</label>
+    <input type="text" [formControl]="control">
+    <app-my-errors [formControl]="control"/>
+  </div>
+  
+  <button [disabled]="group.invalid">Save</button>
+  
+  <pre>
+    value: {{username.value | json}}
+    touched: {{username.touched}}
+    valid: {{username.valid}}
+    dirty: {{username.dirty}}
+    errors: {{username.errors | json}}
+  </pre>
+</ng-container>
+
